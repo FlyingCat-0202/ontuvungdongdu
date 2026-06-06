@@ -103,7 +103,11 @@ function renderLessons() {
 }
 
 function openModal(lessonName) {
-    document.getElementById('modalTitle').innerText = `Từ vựng bài: ${lessonName}`;
+    const tenbai = lessonName[3];
+    if (lessonName.length > 4){
+        tenbai += lessonName[4];
+    }
+    document.getElementById('modalTitle').innerText = `Từ vựng bài ${tenbai}`;
     const listDiv = document.getElementById('modalWordList');
     listDiv.innerHTML = '';
 
