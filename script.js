@@ -88,7 +88,7 @@ function renderLessons() {
 
         const eyeBtn = document.createElement('button');
         eyeBtn.className = 'btn-eye';
-        eyeBtn.innerHTML = '👁️';
+        eyeBtn.innerHTML = '<img src="eye.png" alt="Eye" style="width: 22px; height: 22px; vertical-align: middle; filter: invert(1);">';
         eyeBtn.title = 'Xem từ vựng';
         eyeBtn.onclick = () => openModal(lessonName);
 
