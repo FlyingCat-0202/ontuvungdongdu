@@ -74,7 +74,6 @@ input[type="checkbox"] {
     height: 24px;
     cursor: pointer;
     flex-shrink: 0;
-    accent-color: var(--primary);
 }
 
 /* ---------------- NÚT BẤM (BUTTONS) ---------------- */
@@ -226,4 +225,34 @@ button:active { opacity: 0.8; }
     color: var(--primary); 
     font-weight: bold; 
     margin: 20px 0;
+}
+
+/* Note cho dashboard*/
+.note-box {
+    background-color: #fff3cd; /* Màu nền vàng nhạt */
+    color: #856404; /* Màu chữ nâu vàng */
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 6px solid #ffeeba; /* Vệt màu nhấn ở viền trái */
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.note-box p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.note-box ul {
+    margin-left: 24px; /* Lùi lề cho dấu chấm tròn */
+}
+
+.note-box li {
+    font-size: 15px;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.note-box li:last-child {
+    margin-bottom: 0;
 }
