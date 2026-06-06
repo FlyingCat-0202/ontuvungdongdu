@@ -193,7 +193,6 @@ function renderTestQuestions() {
                 input.classList.remove('wrong');
                 input.classList.add('correct');
                 input.disabled = true; 
-                feedback.innerText = "✔️ Chính xác!";
                 feedback.className = 'feedback correct';
             } else {
                 input.classList.add('wrong');
