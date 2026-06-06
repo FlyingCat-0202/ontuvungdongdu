@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Tập Từ Vựng Tiếng Nhật</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="dashboard">
+        <h1>Ôn từ vựng</h1>
+        
+        <div class="lesson-list" id="lessonContainer">
+            <p style="text-align: center; color: #777;" id="loadingMsg">Đang quét thư mục và tải các bài học</p>
+        </div>
+
+        <button class="btn-start hidden" id="btnStartTest" onclick="startTest()">Bắt đầu kiểm tra</button>
+    </div>
+
+    <div id="wordModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">Đóng danh sách</button>
+            
+            <h2 id="modalTitle">Từ vựng</h2>
+            <div id="modalWordList"></div>
+        </div>
+    </div>
+
+    <div id="testArea" class="hidden">
+        <div id="testQuestions"></div>
+        <button class="btn-start" style="background-color: #FF9800;" onclick="finishTest()">Hoàn thành bài kiểm tra</button>
+    </div>
+
+    <div id="resultArea" class="hidden">
+        <h1>Kết quả của bạn</h1>
+        <div class="score" id="scoreDisplay">0 / 0</div>
+        <button class="btn-start" onclick="backToDashboard()">Quay lại Trang chủ</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
