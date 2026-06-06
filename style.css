@@ -1,156 +1,229 @@
+/* =========================================
+   GIAO DIỆN TỐI ƯU CHO CẢ MOBILE & PC
+========================================= */
+
 :root {
     --primary: #4CAF50;
     --danger: #f44336;
-    --bg: #f9f9f9;
+    --bg: #f4f6f8;
     --text: #333;
+    --white: #ffffff;
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg);
     color: var(--text);
-    max-width: 800px;
+    max-width: 600px; /* Thu hẹp max-width để giao diện gọn gàng trên màn hình to, full viền trên màn hình nhỏ */
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px; /* Lề vừa phải cho điện thoại */
+    line-height: 1.5;
 }
-h1, h2 { text-align: center; }
+
+h1, h2 { 
+    text-align: center; 
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+h1 { font-size: 24px; }
+h2 { font-size: 20px; }
+
 .hidden { display: none !important; }
 
-.upload-section {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    text-align: center;
+/* ---------------- DASHBOARD ---------------- */
+.lesson-list {
+    background: var(--white);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-.lesson-list {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
 .lesson-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 12px 0;
     border-bottom: 1px solid #eee;
+    gap: 10px; /* Khoảng cách giữa chữ và nút mắt */
 }
+
 .lesson-item:last-child { border-bottom: none; }
 
 .lesson-info {
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-.lesson-info input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
+    gap: 12px;
+    flex: 1; /* Cho phép phần thông tin chiếm hết khoảng trống */
 }
 
+.lesson-info span {
+    font-size: 16px;
+    word-break: break-word; /* Tự xuống dòng nếu tên bài quá dài trên đt */
+}
+
+/* Tăng kích thước checkbox để dễ chạm trên điện thoại */
+input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    flex-shrink: 0;
+    accent-color: var(--primary);
+}
+
+/* ---------------- NÚT BẤM (BUTTONS) ---------------- */
 button {
-    padding: 8px 16px;
+    padding: 12px 16px; /* Nút to hơn để dễ ấn trên mobile */
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     background-color: #2196F3;
     color: white;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.2s;
 }
-button:hover { opacity: 0.9; }
+
+button:active { opacity: 0.8; }
+
 .btn-start {
     display: block;
     width: 100%;
     background-color: var(--primary);
     font-size: 18px;
-    padding: 12px;
+    padding: 15px;
     margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
 .btn-eye {
     background-color: #607d8b;
     border-radius: 50%;
-    width: 35px;
-    height: 35px;
+    width: 44px;  /* Chuẩn vùng chạm tối thiểu của Apple/Google trên mobile */
+    height: 44px;
     padding: 0;
-    font-size: 16px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-/* Modal */
+/* ---------------- MODAL (POPUP TỪ VỰNG) ---------------- */
 .modal-overlay {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.6);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-}
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 500px;
-    max-height: 80vh;
-    overflow-y: auto;
-}
-.word-item {
-    display: flex;
-    align-items: center;
-    padding: 8px 0;
-    border-bottom: 1px dashed #ccc;
-}
-.word-item input { margin-right: 10px; cursor: pointer; width: 18px; height: 18px;}
-.modal-close {
-    background: var(--danger);
-    margin-top: 0;
-    margin-bottom: 15px; /* Căn chỉnh lại vì đã đưa lên đầu */
-    width: 100%;
-    font-weight: bold;
+    padding: 15px; /* Giữ lề để modal không dính sát viền điện thoại */
 }
 
-/* Test Area */
+.modal-content {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 85vh; /* Không vượt quá chiều cao màn hình đt */
+    overflow-y: auto; /* Cuộn dọc nếu nhiều từ */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.modal-close {
+    background: var(--danger);
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 12px;
+}
+
+.word-item {
+    display: flex;
+    align-items: flex-start; /* Căn trên cùng đề phòng chữ dài xuống dòng */
+    padding: 12px 0;
+    border-bottom: 1px dashed #ccc;
+    gap: 12px;
+}
+
+.word-item label {
+    font-size: 16px;
+    line-height: 1.4;
+    word-break: break-word;
+    flex: 1;
+}
+
+/* ---------------- KHU VỰC LÀM BÀI ---------------- */
 .test-question {
-    background: white;
-    padding: 15px;
+    background: var(--white);
+    padding: 20px;
     margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
+
 .test-question label {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 17px;
     color: #1976D2;
 }
+
 .test-question input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
+    padding: 15px; /* Ô nhập liệu to rõ ràng */
+    font-size: 16px; /* Cỡ chữ 16px giúp iPhone không bị tự động zoom in màn hình khi gõ */
+    border: 2px solid #ddd;
+    border-radius: 8px;
     outline: none;
+    width: 100%;
+    transition: border-color 0.2s;
 }
+
+.test-question input[type="text"]:focus {
+    border-color: #2196F3;
+}
+
 .test-question input[type="text"].correct {
     border-color: var(--primary);
     background-color: #e8f5e9;
+    color: #2e7d32;
+    font-weight: bold;
 }
+
 .test-question input[type="text"].wrong {
     border-color: var(--danger);
     background-color: #ffebee;
 }
-.feedback { font-size: 14px; font-weight: bold; }
+
+.feedback { 
+    font-size: 15px; 
+    font-weight: bold; 
+    min-height: 22px; /* Giữ sẵn khoảng trống để layout không bị giật khi hiện chữ */
+}
 .feedback.correct { color: var(--primary); }
 .feedback.wrong { color: var(--danger); }
 
-#result-area {
+/* ---------------- KẾT QUẢ ---------------- */
+#resultArea {
     text-align: center;
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: var(--white);
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
-.score { font-size: 48px; color: var(--primary); font-weight: bold; margin: 20px 0;}
+
+.score { 
+    font-size: 56px; 
+    color: var(--primary); 
+    font-weight: bold; 
+    margin: 20px 0;
+}

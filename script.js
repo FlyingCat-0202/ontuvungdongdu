@@ -197,7 +197,7 @@ function renderTestQuestions() {
             } else {
                 input.classList.add('wrong');
                 wrongAttempts.add(index); 
-                feedback.innerText = "❌ Sai rồi, mời bạn nhập lại!";
+                feedback.innerText = "❌";
                 feedback.className = 'feedback wrong';
                 input.value = ""; 
             }
