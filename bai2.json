@@ -26,7 +26,7 @@
   "Xe hơi": ["じどうしゃ", "くるま", "jidousha", "kuruma"],
   "Xe máy": ["ばいく", "バイク", "baiku"],
   "Bánh kẹo": ["おかし", "okashi", "okasi"],
-  "Là cái gì?": ["なんですか", "nan desu ka"],
+  "Là cái gì?": ["なんですか", "nandesuka"],
   "Tiếng Nhật": ["にほんご", "nihongo"],
   "Tiếng Trung Quốc": ["ちゅうごくご", "chuugokugo"],
   "Tiếng Anh": ["えいご", "eigo"],
@@ -46,6 +46,6 @@
   "Máy lạnh": ["くーらー", "クーラー", "kuuraa"],
   "Đàn ông": ["おとこ", "otoko"],
   "Phụ nữ": ["おんな", "onna"],
-  "Vâng, đúng vậy": ["はい、そうです", "hai, soudesu", "hai, sou desu"],
+  "Vâng, đúng vậy": ["はい、そうです", "hai, soudesu", "hai, soudesu"],
   "Không, không phải vậy": ["いいえ、ちがいます", "iie, chigaimasu"]
 }

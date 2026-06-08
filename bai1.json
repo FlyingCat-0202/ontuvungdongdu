@@ -20,13 +20,13 @@
   "Ca sĩ": ["かしゅ", "kashu"],
   "Tài xế": ["うんてんしゅ", "untenshu"],
   "Công việc": ["しごと", "shigoto", "sigoto"],
-  "(Anh / Chị) làm công việc gì?": ["おしごとは", "oshigoto wa", "osigoto wa"],
+  "(Anh / Chị) làm công việc gì?": ["おしごとは", "oshigotowa", "osigotowa"],
   "Vâng": ["はい", "hai"],
   "Không": ["いいえ", "iie"],
   "Ai ?": ["だれ", "dare"],
   "Ai, vị nào ?": ["どなた", "donata"],
   "Tên": ["なまえ", "namae"],
-  "(Anh / Chị) tên gì ?": ["おなまえは", "onamae wa"],
+  "(Anh / Chị) tên gì ?": ["おなまえは", "onamaewa"],
   "Việt Nam": ["べとなむ", "ベトナム", "betonamu"],
   "Nhật Bản": ["にほん", "nihon"],
   "Hàn Quốc": ["かんこく", "kankoku"],
@@ -61,5 +61,5 @@
   "Chào (buổi trưa)": ["こんにちは", "konnichiwa"],
   "Chào (buổi tối)": ["こんばんは", "konbanwa"],
   "Quê quán": ["しゅっしん", "shusshin", "shussin"],
-  "Xin thất lễ, ~": ["しつれいですが", "shitsurei desu ga"]
+  "Xin thất lễ, ~": ["しつれいですが", "shitsureidesuga"]
 }
