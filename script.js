@@ -143,6 +143,7 @@ function startTest() {
     currentTestQuestions = [];
     wrongAttempts.clear();
 
+    // Thu thập các từ vựng từ các bài học được tích chọn ngoài dashboard
     for (let lessonName in lessonsData) {
         if (lessonsData[lessonName].selected) {
             lessonsData[lessonName].words.forEach(word => {
@@ -158,12 +159,15 @@ function startTest() {
         return;
     }
 
+    // Xáo trộn ngẫu nhiên danh sách câu hỏi
     currentTestQuestions.sort(() => Math.random() - 0.5);
 
-    document.getElementById('dashboard').classList.add('hidden');
-    document.getElementById('testArea').classList.remove('hidden');
-    
-    renderTestQuestions();
+    // LƯU DỮ LIỆU VÀO LOCALSTORAGE ĐỂ TRANG KIỂM TRA ĐỌC ĐƯỢC
+    localStorage.setItem('testQuestions', JSON.stringify(currentTestQuestions));
+
+    // CHUYỂN HƯỚNG SANG TRANG HTML MỚI
+    // Nếu bạn làm việc trên máy tính (local), file này tên là kiemtra.html đặt cùng thư mục
+    window.location.href = 'kiemtra.html';
 }
 
 function renderTestQuestions() {

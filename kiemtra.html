@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Kiểm Tra Từ Vựng</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+    <div id="testArea">
+        <h1>📝 Bài Kiểm Tra</h1>
+        <div id="testQuestions"></div>
+        <button class="btn-start" style="background-color: #FF9800; margin-bottom: 30px;" onclick="finishTest()">✅ Hoàn thành bài kiểm tra</button>
+    </div>
+
+    <div id="resultArea" class="hidden">
+        <h1>🏆 Kết quả của bạn</h1>
+        <div class="score" id="scoreDisplay">0 / 0</div>
+        <p style="text-align: center; color: #666; margin-bottom: 20px;"><em>(Chỉ tính các câu trả lời đúng ngay trong lần đầu tiên)</em></p>
+        <button class="btn-start" onclick="backToDashboard()">🏠 Quay lại Trang chủ</button>
+    </div>
+
+    <script src="kiemtra.js"></script>
+</body>
+</html>
