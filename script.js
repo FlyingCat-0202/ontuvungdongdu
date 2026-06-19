@@ -2,7 +2,7 @@
 // 1. DANH SÁCH FILE JSON ĐỂ WEB TỰ ĐỘNG QUÉT
 // Khi bạn có bài mới (VD: a.json), chỉ cần thêm tên vào đây
 // ========================================================
-const lessonFiles = ['bai1.json', 'bai2.json', 'bai3.json'];
+const lessonFiles = ['bai1.json', 'bai2.json', 'bai3.json', 'bai4.json'];
 
 let lessonsData = {}; 
 let currentTestQuestions = [];
